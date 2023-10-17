@@ -12,12 +12,12 @@ cp.sigma_min=ones(4,Data.dim);
 cp.sigma_max=ones(4,Data.dim);
 %%----缩放1----%%%%
 cp.sigma_stdev(1,:) = 1.0*cp.xrange; %160
-cp.sigma_stdev(2,:) = 0.8*cp.xrange; %20
-cp.sigma_stdev(3,:) = 0.5*cp.xrange; %2
+cp.sigma_stdev(2,:) = 0.7*cp.xrange; %20
+cp.sigma_stdev(3,:) = 0.4*cp.xrange; %2
 cp.sigma_stdev(4,:) = 0.1*cp.xrange; %0.5
 cp.sigma_min(1,:)=1.0*(1/2)^4*cp.xrange; %0.015625   %扰动半径的下界，即阈值
-cp.sigma_min(2,:)=0.8*(1/2)^4*cp.xrange;
-cp.sigma_min(3,:)=0.5*(1/2)^4*cp.xrange;
+cp.sigma_min(2,:)=0.7*(1/2)^4*cp.xrange;
+cp.sigma_min(3,:)=0.4*(1/2)^4*cp.xrange;
 cp.sigma_min(4,:)=0.1*(1/2)^4*cp.xrange;
 cp.sigma_max=cp.sigma_stdev;   %largest allowed perturbation range
 

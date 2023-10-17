@@ -56,7 +56,7 @@ for rr=1:repeat
             % save (strcat('temp_data\Data1.mat'));
 
 
-            Iteration=Dim*150;
+            Iteration=Dim*100;
 
 
             % miso('datainput_dp',Iteration, 'rbf_c', [], 'slhd', 'cp4',[],Data); %SODA-ADM
