@@ -26,7 +26,7 @@ non_cate=1:Data.dim;
 non_cate(Data.category)=[];
 dist2=pdist2(Data.S(:,non_cate),Data.S(:,non_cate));
 if numel(Data.category)>0
-    distances=sqrt(dist2.^2+dist1.^2.*numel(Data.category));
+    distances=dist2+dist1.*numel(Data.category);
 else
     distances=dist2;
 end
