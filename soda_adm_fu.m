@@ -260,7 +260,7 @@ while Data.m < Data.maxeval  %do until budget of function evaluations exhausted
     CandPoint=[CandPoint1;CandPoint2;CandPoint3;CandPoint4];
     CandPoint(:,Data.integer)=round(CandPoint(:,Data.integer)); %round integer variable values
 
-    if Data.m < 0.8* Data.maxeval
+    if Data.m <= Data.maxeval
         xnew = compute_scores(Data,CandPoint,w_r, lambda, gamma, rbf_flag); %select the best candidate
     else
         xnew = compute_scores_rbf(Data,CandPoint, lambda, gamma, rbf_flag );
