@@ -34,7 +34,11 @@ dist1=pdist2(CandPoint(:,Data.category),Data.S(:,Data.category),"hamming");
 non_cate=1:Data.dim;
 non_cate(Data.category)=[];
 dist2=pdist2(CandPoint(:,non_cate),Data.S(:,non_cate));
-R=sqrt(dist2.^2+dist1.^2.*numel(Data.category));
+if numel(Data.category)>0
+    R=sqrt(dist2.^2+dist1.^2.*numel(Data.category));
+else
+    R=dist2;
+end
                               %compute RBF matrix values
 if strcmp(rbf_flag,'cub') %cobic RBF
     Phi=R.^3;
